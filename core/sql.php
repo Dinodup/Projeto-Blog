@@ -1,5 +1,6 @@
 <?php
 
+//Função para inserir dados de qualquer tabela
 function insert (string $entidade, array $dados) : string 
 {
     $instrucao = "INSERT INTO {$entidade}";
@@ -13,6 +14,7 @@ function insert (string $entidade, array $dados) : string
     return $instrucao;
 }
 
+//Função para deletar dados de qualquer tabela
 function update (string $entidade, array $dados, array $criterio = []) : string
 {
     $instrucao = "UPDATE {$entidade}";
@@ -34,6 +36,7 @@ function update (string $entidade, array $dados, array $criterio = []) : string
     return $instrucao;
 }
 
+//Função para atualizar dados de qualquer tabela
 function delete (string $entidade, array $criterio = []) : string
 {
     $instrucao = "DELETE {$entidade}";
@@ -49,6 +52,7 @@ function delete (string $entidade, array $criterio = []) : string
 return $instrucao;
 }
 
+//Função para selecionar dados de qualquer tabela
 function select (string $entidade, array $campos, array $criterio = [],
 string $ordem = null) : string
 {
